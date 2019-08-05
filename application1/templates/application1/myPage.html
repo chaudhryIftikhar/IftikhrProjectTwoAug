@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chaudhry Iftikhar Hussain</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <br><br><br>
+    <div class="container">
+      <div class="jumbotron">
+        <h3> Page Title: <strong>{{ Object.title }}</strong> </h3>
+          {% if Object.status == "DF" %}
+              <p> This page is not yet published. </p>
+          {% else %}
+              <p> Created By: <strong>{{ Object.author }}</strong></p>
+              <h4> <strong>Below is the content of this page.</strong> </h4>
+              <p> {{ Object.content }} </p>
+          {% endif %}
+      </div>
+    </div>
+
+</body>
+</html>
